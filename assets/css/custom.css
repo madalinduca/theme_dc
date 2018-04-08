@@ -1,0 +1,32 @@
+/** Loading Custom Fonts **/
+/** ******************** **/
+@font-face {
+  font-family: 'poppinsbold';
+  src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'), url('../fonts/poppins-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinslight';
+  src: url('../fonts/poppins-light-webfont.woff2') format('woff2'), url('../fonts/poppins-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "poppinsbold", Roboto, Arial, sans-serif;
+}
+.paragraph-text {
+  font-family: "poppinslight", Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #5B83AD;
+}
