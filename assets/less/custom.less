@@ -9,6 +9,14 @@ h1, h2, h3, h4, h5, h6, .paragraph-pre, .paragraph_tagline{
     font-family: @font-headings;
 }
 
+a{
+	transition: opacity .14s ease-in-out;
+}
+
+div.block_testimonials{
+	width: auto;
+}
+
 @font-headings: "poppinsbold", Roboto, Arial, sans-serif;
 @font-text: "poppinslight", Roboto, Arial, sans-serif;
 
@@ -107,6 +115,13 @@ h1, h2, h3, h4, h5, h6, .paragraph-pre, .paragraph_tagline{
 	margin-right: 20px;
 }
 
+.block_nav-link,
+.logo{
+	&:hover{
+		opacity: .5;
+	}
+}
+
 h1.heading {
     margin-top: 0px;
     margin-bottom: 20px;
@@ -151,8 +166,30 @@ h1.heading {
 		    left: -18px;
 		}
 		&.button_cta-contrast{
+			&:before{
+				display: none;
+			}
 			background-color: @color-brand;
 			color: #ffffff;
+			box-shadow: 0px 22px 55px rgba(0,0,0,.15);
+		}	  
+}
+
+.block_service{
+	margin-top: 100px;
+	top: -55px;
+	position: relative;
+	padding: 65px 45px 30px 45px;
+		.block_icon{
+			position: absolute;
+    		top: -55px;
 		}
-	  
+}
+
+.block_row.block_row-s{
+	text-align: center;
+	.block_service{
+		text-align: left;
+		float: none;
+	}
 }

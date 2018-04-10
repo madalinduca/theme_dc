@@ -10,6 +10,12 @@ h6,
 .paragraph_tagline {
   font-family: "poppinsbold", Roboto, Arial, sans-serif;
 }
+a {
+  transition: opacity 0.14s ease-in-out;
+}
+div.block_testimonials {
+  width: auto;
+}
 @font-face {
   font-family: 'poppinsbold';
   src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'), url('../fonts/poppins-bold-webfont.woff') format('woff');
@@ -91,6 +97,10 @@ h6,
 .block_nav-link {
   margin-right: 20px;
 }
+.block_nav-link:hover,
+.logo:hover {
+  opacity: .5;
+}
 h1.heading {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -137,4 +147,25 @@ h1.heading {
 .button_cta.button_cta-contrast {
   background-color: #673fbf;
   color: #ffffff;
+  box-shadow: 0px 22px 55px rgba(0, 0, 0, 0.15);
+}
+.button_cta.button_cta-contrast:before {
+  display: none;
+}
+.block_service {
+  margin-top: 100px;
+  top: -55px;
+  position: relative;
+  padding: 65px 45px 30px 45px;
+}
+.block_service .block_icon {
+  position: absolute;
+  top: -55px;
+}
+.block_row.block_row-s {
+  text-align: center;
+}
+.block_row.block_row-s .block_service {
+  text-align: left;
+  float: none;
 }
