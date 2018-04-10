@@ -1,5 +1,15 @@
 /** Loading Custom Fonts **/
 /** ******************** **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.paragraph-pre,
+.paragraph_tagline {
+  font-family: "poppinsbold", Roboto, Arial, sans-serif;
+}
 @font-face {
   font-family: 'poppinsbold';
   src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'), url('../fonts/poppins-bold-webfont.woff') format('woff');
@@ -12,21 +22,119 @@
   font-weight: normal;
   font-style: normal;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
+.paragraph_tagline {
+  font-size: 24px;
+  opacity: .5;
+  margin-bottom: 30px;
+}
+.paragraph_hero-text {
+  font-size: 24px;
+  font-family: "poppinslight", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+.paragraph_text {
+  color: #606f85;
+  font-family: "poppinslight", Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+}
+.paragraph-pre {
+  color: #673fbf;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.heading_section {
+  font-size: 42px;
+  color: #29384d;
+  position: relative;
+  line-height: 1.33;
+}
+.heading_section:after {
+  position: absolute;
+  content: '';
+  width: 68px;
+  height: 3px;
+  background-color: #673fbf;
+  display: inline-block;
+  left: 50%;
+  margin-left: -34px;
+  bottom: 0;
+}
+.block_top {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.block_top-cta {
+  display: inline-block;
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  padding: 0 38px;
+  border: 2px solid white;
+  border-radius: 35px;
+  top: 50%;
+  height: 54px;
+  line-height: 50px;
+  margin-top: -32px;
+}
+.block_top-cta:hover {
+  background-color: #fff;
+  color: #673fbf;
+}
+.block_nav-link,
+.block_top-cta {
   font-family: "poppinsbold", Roboto, Arial, sans-serif;
+  text-transform: uppercase;
 }
-.paragraph-text {
-  font-family: "poppinslight", Arial, sans-serif;
+.block_nav-link {
+  margin-right: 20px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #5B83AD;
+h1.heading {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 0 50px;
+  font-size: 72px;
+  text-align: center;
+  line-height: 1.05;
+}
+.button_cta {
+  position: relative;
+  font-family: "poppinsbold", Roboto, Arial, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 38px 60px;
+  background-color: #ffffff;
+  color: #673fbf;
+  text-transform: uppercase;
+  font-size: 24px;
+  border-radius: 100px;
+}
+.button_cta:before {
+  content: '';
+  position: absolute;
+  border: 8px solid rgba(255, 255, 255, 0.25);
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+  border-radius: 100px;
+}
+.button_cta:hover:before,
+.button_cta:active:before {
+  top: -18px;
+  right: -18px;
+  bottom: -18px;
+  left: -18px;
+}
+.button_cta.button_cta-contrast {
+  background-color: #673fbf;
+  color: #ffffff;
 }
