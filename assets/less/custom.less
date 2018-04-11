@@ -1,9 +1,12 @@
 /** Loading Custom Fonts **/
 /** ******************** **/
-
+@import url("icons.css");
 @color-text: #606f85;
 @color-headings: #29384d;
 @color-brand: #673fbf;
+@box-shadow-light: 0px 22px 55px rgba(122, 135, 157, .2);
+@box-shadow-contrast: 0px 22px 55px rgba(34,34,34, .2);
+@border-radius: 10px;
 
 h1, h2, h3, h4, h5, h6, .paragraph-pre, .paragraph_tagline{
     font-family: @font-headings;
@@ -17,11 +20,12 @@ div.block_testimonials{
 	width: auto;
 }
 
+
 @font-headings: "poppinsbold", Roboto, Arial, sans-serif;
 @font-text: "poppinslight", Roboto, Arial, sans-serif;
 
 
- @font-face {
+@font-face {
     font-family: 'poppinsbold';
     src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
          url('../fonts/poppins-bold-webfont.woff') format('woff');
@@ -35,6 +39,17 @@ div.block_testimonials{
          url('../fonts/poppins-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+  font-family: "lineasoftware";
+  src:url("../fonts/linea-software-10.eot");
+  src:url("../fonts/linea-software-10.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/linea-software-10.woff") format("woff"),
+    url("../fonts/linea-software-10.ttf") format("truetype"),
+    url("../fonts/linea-software-10.svg#linea-software-10") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .section-hero{
@@ -200,7 +215,7 @@ h1.heading {
     		}
 			background-color: @color-brand;
 			color: #ffffff;
-			box-shadow: 0px 22px 55px rgba(0,0,0,.15);
+			box-shadow: @box-shadow-light;
 		}	  
 }
 
@@ -209,9 +224,16 @@ h1.heading {
 	top: -55px;
 	position: relative;
 	padding: 65px 45px 30px 45px;
+	box-shadow: @box-shadow-contrast;
 		.block_icon{
 			position: absolute;
     		top: -55px;
+    		text-align: center;
+    		line-height: 120px;
+    		> div{
+    			font-size: 42px;
+    			color: #fff;
+    		}
 		}
 }
 
@@ -246,7 +268,8 @@ h1.heading {
 }
 .block_testimonial{
 	background-color: #ffffff;
-	border-radius: 6px;
+	border-radius: 10px;
+	box-shadow: @box-shadow-light;
 	.block_testimonial-image{
 			width: 128px;
 			height: 128px;
@@ -279,6 +302,7 @@ h1.heading {
 
 .owl-carousel .owl-stage{
 	padding-top: 65px;
+	padding-bottom: 55px;
 }
 
 .owl-carousel .owl-item{
@@ -324,5 +348,39 @@ h1.heading {
 		border-radius: 32px;
 		background: none;
 		margin: 0 32px;
+	}
+}
+
+.block_work{
+	box-shadow: @box-shadow-light;
+	border-radius: @border-radius;
+	.block_work-logo{
+		width: 76px;
+	}
+	.block_work-image{
+		position: relative;
+		border-radius: @border-radius 0 0 @border-radius;
+		overflow: hidden;
+		> img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 585px;
+		}
+	}
+	.block_work-content{
+		border-radius: 0 @border-radius @border-radius 0;
+		padding-right: 45px;
+	}
+	.paragraph_tag {
+	    display: inline-block;
+	    margin-right: 5px;
+	    padding: 5px 12px;
+	    border: 1px solid rgba(216,220,225,1);
+	    border-radius: 100px;
+	    color: #606f85;
+	    font-size: 11px;
+	    line-height: 14px;
+	    text-align: center;
 	}
 }

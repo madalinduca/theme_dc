@@ -1,5 +1,6 @@
 /** Loading Custom Fonts **/
 /** ******************** **/
+@import url("icons.css");
 h1,
 h2,
 h3,
@@ -25,6 +26,13 @@ div.block_testimonials {
 @font-face {
   font-family: 'poppinslight';
   src: url('../fonts/poppins-light-webfont.woff2') format('woff2'), url('../fonts/poppins-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lineasoftware";
+  src: url("../fonts/linea-software-10.eot");
+  src: url("../fonts/linea-software-10.eot?#iefix") format("embedded-opentype"), url("../fonts/linea-software-10.woff") format("woff"), url("../fonts/linea-software-10.ttf") format("truetype"), url("../fonts/linea-software-10.svg#linea-software-10") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -169,7 +177,7 @@ h1.heading {
 .button_cta.button_cta-contrast {
   background-color: #673fbf;
   color: #ffffff;
-  box-shadow: 0px 22px 55px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 22px 55px rgba(122, 135, 157, 0.2);
 }
 .button_cta.button_cta-contrast:before {
   border: 8px solid rgba(103, 63, 191, 0.25);
@@ -182,10 +190,17 @@ h1.heading {
   top: -55px;
   position: relative;
   padding: 65px 45px 30px 45px;
+  box-shadow: 0px 22px 55px rgba(34, 34, 34, 0.2);
 }
 .block_service .block_icon {
   position: absolute;
   top: -55px;
+  text-align: center;
+  line-height: 120px;
+}
+.block_service .block_icon > div {
+  font-size: 42px;
+  color: #fff;
 }
 .block_row.block_row-s {
   text-align: center;
@@ -216,7 +231,8 @@ h1.heading {
 }
 .block_testimonial {
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 10px;
+  box-shadow: 0px 22px 55px rgba(122, 135, 157, 0.2);
 }
 .block_testimonial .block_testimonial-image {
   width: 128px;
@@ -245,6 +261,7 @@ h1.heading {
 }
 .owl-carousel .owl-stage {
   padding-top: 65px;
+  padding-bottom: 55px;
 }
 .owl-carousel .owl-item {
   width: 860px !important;
@@ -286,4 +303,37 @@ h1.heading {
   border-radius: 32px;
   background: none;
   margin: 0 32px;
+}
+.block_work {
+  box-shadow: 0px 22px 55px rgba(122, 135, 157, 0.2);
+  border-radius: 10px;
+}
+.block_work .block_work-logo {
+  width: 76px;
+}
+.block_work .block_work-image {
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+.block_work .block_work-image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 585px;
+}
+.block_work .block_work-content {
+  border-radius: 0 10px 10px 0;
+  padding-right: 45px;
+}
+.block_work .paragraph_tag {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 12px;
+  border: 1px solid #d8dce1;
+  border-radius: 100px;
+  color: #606f85;
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
 }
