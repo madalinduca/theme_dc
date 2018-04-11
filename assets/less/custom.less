@@ -20,6 +20,10 @@ div.block_testimonials{
 	width: auto;
 }
 
+body{
+	overflow-x: hidden;
+}
+
 
 @font-headings: "poppinsbold", Roboto, Arial, sans-serif;
 @font-text: "poppinslight", Roboto, Arial, sans-serif;
@@ -67,6 +71,12 @@ div.block_testimonials{
 			left: 0;
 			z-index: 0;
 	    }
+}
+
+.section-hero,
+.section-contact{
+	    background-image: -webkit-linear-gradient(270deg, #be52a7, #7442bb);
+    background-image: linear-gradient(180deg, #be52a7, #7442bb);
 }
 
 .paragraph_tagline{
@@ -246,6 +256,7 @@ h1.heading {
 }
 
 .section-about{
+	position: relative;
 	padding-top: 140px;
 	background: rgba(255,255,255,1);
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(240,245,251,1) 100%);
@@ -255,11 +266,17 @@ h1.heading {
 	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(240,245,251,1) 100%);
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(240,245,251,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f5fb', GradientType=0 );
+	overflow: hidden;
+		.block_about{
+			z-index: 1;
+			position: relative;
+		}
 }
 
 .section-testimonials{
 	padding-bottom: 140px;
 	position: relative;
+	z-index: 1;
 	.quotes-icon{
 		position: absolute;
 		top: 0;
@@ -307,6 +324,8 @@ h1.heading {
 
 .owl-carousel .owl-item{
 	width: 860px !important;
+	transition: opacity .33s ease-in-out;
+
 }
 
 .owl-nav,
@@ -383,4 +402,29 @@ h1.heading {
 	    line-height: 14px;
 	    text-align: center;
 	}
+}
+
+.oblique{
+	opacity: .7;
+	width: calc(~'100% + 480px');
+	position: absolute;
+    top: 820px;
+    transform: rotate(-15deg);
+	height: 720px;
+	display: inline-block;
+	position: absolute;
+	right: -240px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f5fb+0,ffffff+100&1+0,0+100 */
+	background: -moz-linear-gradient(top, rgba(240,245,251,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(240,245,251,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(240,245,251,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f5fb', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.owl-stage > div:not(.center){
+	opacity: .35 !important;
+}
+
+.section-contact{
+	padding-bottom: 140px;
 }
